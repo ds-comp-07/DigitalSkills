@@ -1,8 +1,7 @@
 name: Build a Docker image and Push it to ACR
-
 on:
   push:
-    branches: [ main ]
+    branches: [ master ]
     paths:
       - $GITHUB_WORKSPACE/content-web
 jobs:
