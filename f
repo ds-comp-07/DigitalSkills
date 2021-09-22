@@ -21,9 +21,9 @@ jobs:
           password: ${{ secrets.ACR_PASSWORD }}
 
       - run: |
-        docker build "$GITHUB_WORKSPACE/content-api" -f  "content-api/Dockerfile" -t fabmedicalcoq.azurecr.io/content-api:${{ github.sha }} 
-        docker push fabmedicalcoq.azurecr.io/content-api:${{ github.sha }}
-        docker build "$GITHUB_WORKSPACE/content-web" -f  "content-web/Dockerfile" -t fabmedicalcoq.azurecr.io/content-web:${{ github.sha }} 
-        docker push fabmedicalcoq.azurecr.io/content-web:${{ github.sha }}
-        docker build "$GITHUB_WORKSPACE/content-init" -f  "content-init/Dockerfile" -t fabmedicalcoq.azurecr.io/content-init:${{ github.sha }} 
-        docker push fabmedicalcoq.azurecr.io/content-init:${{ github.sha }}
+        docker build "$GITHUB_WORKSPACE/content-api" -f  "content-api/Dockerfile" -t fabmedicalmds.azurecr.io/content-api:${{ github.sha }} 
+        docker push fabmedicalmds.azurecr.io/content-api:${{ github.sha }}
+        docker build "$GITHUB_WORKSPACE/content-web" -f  "content-web/Dockerfile" -t fabmedicalmds.azurecr.io/content-web:${{ github.sha }} 
+        docker push fabmedicalmds.azurecr.io/content-web:${{ github.sha }}
+        docker build "$GITHUB_WORKSPACE/content-init" -f  "content-init/Dockerfile" -t fabmedicalmds.azurecr.io/content-init:${{ github.sha }} 
+        docker push fabmedicalmds.azurecr.io/content-init:${{ github.sha }}
