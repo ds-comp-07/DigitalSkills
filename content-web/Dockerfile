@@ -12,7 +12,7 @@ WORKDIR /usr/src/app
 COPY package.json /usr/src/app/
 RUN npm install
 
-# Bundle app sourcik
+# Bundle app sourcikk
 COPY . /usr/src/app
 RUN ng build 
 
