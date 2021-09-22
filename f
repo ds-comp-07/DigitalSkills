@@ -3,11 +3,8 @@ name: Build a Docker image and Push it to ACR
 on:
   push:
     branches: [ main ]
-  pull_request:
-    branches: [ master ]
-
-  workflow_dispatch:
-
+    paths:
+      - $GITHUB_WORKSPACE/content-web
 jobs:
   build:
     runs-on: ubuntu-latest
