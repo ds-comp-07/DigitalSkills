@@ -18,6 +18,7 @@ RUN ng build
 
 FROM base as final
 ENV CONTENT_API_URL=http://localhost:3001
+RUN npm install applicationinsights --save
 WORKDIR /usr/src/app
 COPY --from=build /usr/src/app .
 CMD [ "node", "app.js" ]
